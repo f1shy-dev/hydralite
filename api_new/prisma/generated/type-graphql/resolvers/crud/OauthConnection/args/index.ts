@@ -1,0 +1,12 @@
+export { AggregateOauthConnectionArgs } from "./AggregateOauthConnectionArgs";
+export { CreateManyOauthConnectionArgs } from "./CreateManyOauthConnectionArgs";
+export { CreateOauthConnectionArgs } from "./CreateOauthConnectionArgs";
+export { DeleteManyOauthConnectionArgs } from "./DeleteManyOauthConnectionArgs";
+export { DeleteOauthConnectionArgs } from "./DeleteOauthConnectionArgs";
+export { FindFirstOauthConnectionArgs } from "./FindFirstOauthConnectionArgs";
+export { FindManyOauthConnectionArgs } from "./FindManyOauthConnectionArgs";
+export { FindUniqueOauthConnectionArgs } from "./FindUniqueOauthConnectionArgs";
+export { GroupByOauthConnectionArgs } from "./GroupByOauthConnectionArgs";
+export { UpdateManyOauthConnectionArgs } from "./UpdateManyOauthConnectionArgs";
+export { UpdateOauthConnectionArgs } from "./UpdateOauthConnectionArgs";
+export { UpsertOauthConnectionArgs } from "./UpsertOauthConnectionArgs";

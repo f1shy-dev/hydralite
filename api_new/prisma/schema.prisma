@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../prisma/generated/type-graphql"
+}
+
+model User {
+  id               String       @id @default(uuid())
+  username         String
+  email            String
+  joinDate         String
+  marketingCredits Int
+  elonicMemberId   String
+  projects         Project[]    @relation("Owner")
+  likedProjects    Project[]    @relation("LikedPosts")
+  followedProjects Project[]
+  collaborations   Project[]    @relation("Collaboration")
+  profile          UserProfile?
+  followedBy       User[]       @relation("UserFollows", references: [id])
+  following        User[]       @relation("UserFollows", references: [id])
+}
+
+model OauthConnection {
+  id                 String  @id @default(uuid())
+  email              String
+  username           String
+  oauthServiceUserId String
+  isPrimary          Boolean
+}
+
+model Project {
+  id            String @id @default(uuid())
+  title         String
+  description   String
+  owner         User   @relation("Owner", fields: [ownerId], references: [id])
+  ownerId       String
+  logoUrl       String
+  bannerUrl     String
+  likers        User[] @relation("LikedPosts")
+  followers     User[]
+  collaborators User[] @relation("Collaboration")
+  githubUrl     String
+
+}
+
+model UserProfile {
+  id        String @id @default(uuid())
+  owner     User   @relation(fields: [ownerId], references: [id])
+  ownerId   String
+  avatarUrl String
+  bio       String
+}
