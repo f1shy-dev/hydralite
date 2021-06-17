@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
+
+/* 
+BREAKPOINTS:
+  mobile - 500px
+  tablet - 768px
+  small laptop - 1024px
+  large laptops to desktops - 1280px
+  extra large - 1536px
+*/
+
+:root {
+    --bg: #f9f8fe;
+    --bg-inverted: #23272a;
+
+    --primary: #23272a;
+    --primary-inverted: #f9f8fe;
+
+    --muted: #8d8d8d;
+    --muted-inverted: var(--primary);
+
+    --muted-2: #e5e5e5;
+    --muted-2-inverted: var(--primary);
+
+    --muted-3: #8098b4;
+
+    --accent: #4649de;
+    --accent-inverted: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html,
+body {
+    background-color: var(--bg);
+    color: var(--primary);
+    scroll-behavior: smooth;
+}

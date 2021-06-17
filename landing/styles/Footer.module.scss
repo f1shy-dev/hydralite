@@ -1,0 +1,13 @@
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.footer__logo {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    margin: 0 auto;
+}

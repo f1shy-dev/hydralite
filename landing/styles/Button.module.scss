@@ -1,0 +1,37 @@
+.button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 17px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button__accent {
+    background: var(--accent);
+    color: var(--accent-inverted);
+}
+
+.button__muted {
+    background: var(--muted-2);
+    color: var(--muted-2-inverted);
+}
+
+.button__black {
+    background: var(--bg-inverted);
+    color: var(--primary-inverted);
+}
+
+.button__black .button__icon {
+    color: white;
+}
