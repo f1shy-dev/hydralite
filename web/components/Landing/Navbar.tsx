@@ -1,9 +1,25 @@
 import React from "react";
-import styles from "~/styles/index.module.scss";
-import NavLink from "~/components/Landing/NavLink";
+import styles from "~/styles/Index.module.scss";
 import { projectName } from "~/constants";
+import scrollToRef from "util/scrollToRef";
 
-const Navbar = () => {
+const NavLink = ({
+    text,
+    href,
+    onClick,
+}: {
+    text: string;
+    href?: string;
+    onClick: (e) => any;
+}) => {
+    return (
+        <a className={styles.navbar__link} href={href || ""} onClick={onClick}>
+            {text}
+        </a>
+    );
+};
+
+const Navbar = ({ waitlistCardRef }) => {
     return (
         <nav className={styles.navbar}>
             <div>
@@ -14,7 +30,13 @@ const Navbar = () => {
                 />
             </div>
             <div>
-                <NavLink text="Join the waitlist" />
+                <NavLink
+                    text="Join Waitlist"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        scrollToRef(waitlistCardRef);
+                    }}
+                />
             </div>
         </nav>
     );

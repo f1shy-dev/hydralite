@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { ReactElement, useState } from 'react'
 import sleep from 'util/sleep'
-import styles from '~/styles/index.module.scss'
+import styles from '~/styles/Index.module.scss'
 import Icon from '../Icon'
 
 const WaitlistCard = () => {

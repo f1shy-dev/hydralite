@@ -1,13 +1,13 @@
 .footer {
     padding-top: 1rem;
+    padding-bottom: 1rem;
     display: grid;
     place-items: center;
-    // border-top: 1px solid var(--muted-2);
 }
 
 .footer__logo {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     object-fit: contain;
     margin: 0 auto;
 }

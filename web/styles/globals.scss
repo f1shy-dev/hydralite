@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
 
 /* 
 BREAKPOINTS:
@@ -10,32 +10,33 @@ BREAKPOINTS:
 */
 
 :root {
-  --bg: #f9f8fe;
-  --bg-inverted: #23272A;
-  
-  --primary: #23272A;
-  --primary-inverted: #f9f8fe;
+    --bg: #f9f8fe;
+    --bg-inverted: #23272a;
 
-  --muted: #8d8d8d;
-  --muted-inverted: var(--primary);
+    --primary: #23272a;
+    --primary-inverted: #f9f8fe;
 
-  --muted-2: #e5e5e5;
-  --muted-2-inverted: var(--primary);
+    --muted: #8d8d8d;
+    --muted-inverted: var(--primary);
 
-  --muted-3: #8098B4;
+    --muted-2: #e5e5e5;
+    --muted-2-inverted: var(--primary);
 
-  --accent: #4649de;
-  --accent-inverted: #ffffff;
+    --muted-3: #8098b4;
+
+    --accent: #4649de;
+    --accent-inverted: #ffffff;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 html,
 body {
-  font-family: "Nunito Sans", sans-serif;
-  background-color: var(--bg);
-  color: var(--primary);
+    background-color: var(--bg);
+    color: var(--primary);
+    scroll-behavior: smooth;
 }

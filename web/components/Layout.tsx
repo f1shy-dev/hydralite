@@ -5,13 +5,15 @@ import Footer from './Footer'
 const Layout = ({
     children,
     navType,
+    waitlistCardRef,
 }: {
     children: any
     navType: 'home' | 'dash'
+    waitlistCardRef: React.MutableRefObject<any>
 }) => {
     return (
         <div>
-            {navType === 'home' && <Navbar />}
+            {navType === 'home' && <Navbar waitlistCardRef={waitlistCardRef} />}
             {children}
             <Footer />
         </div>
